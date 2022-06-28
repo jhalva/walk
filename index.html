@@ -58,13 +58,7 @@
   height: 400px; 
 }
 
-.float-banner {
-            position: absolute;
-            left: 50%;
-            width: 200px; height: 200px;
-            margin-top: 200px; margin-left: -200px;
-        }
-    
+
        
 
        
@@ -102,24 +96,7 @@
         </nav>
        
        
-       
-        jQuery(document).ready(function() {
-            $(window).scroll(function () {
-                var set = $(document).scrollTop()+"px";
-                jQuery('#float-banner').animate({
-                    top:set
-                },
-                {
-                    duration:1000,
-                    queue:false
-                });
-            });
-        });
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    
+      
            
                     
                     <div class="text-center">
