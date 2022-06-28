@@ -58,13 +58,12 @@
   height: 400px; 
 }
 
-    div {
-  height:900px;
-}
-.fixed {
-  position: fixed;
-  background-color: red;
-}
+.float-banner {
+            position: absolute;
+            left: 50%;
+            width: 200px; height: 200px;
+            margin-top: 200px; margin-left: -200px;
+        }
     
        
 
@@ -76,14 +75,23 @@
     
 
                         
- 
-    <div>
-       
-  <li class="nav-item"><a class="btn btn-primary" href="https://wa.me/+5561982409762">Quero fazer um orçamento</a></li>
-  
-</div>
-     
+  jQuery(document).ready(function() {
+            $(window).scroll(function () {
+                var set = $(document).scrollTop()+"px";
+                jQuery('#float-banner').animate({
+                    top:set
+                },
+                {
+                    duration:1000,
+                    queue:false
+                });
+            });
+        });
+
     
+    div id="float-banner" class="float-banner">
+            <img src="banner.gif">
+        </div>
     
     
     
